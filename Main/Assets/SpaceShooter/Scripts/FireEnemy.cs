@@ -9,14 +9,13 @@ public class FireEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float interval = Random.Range(1, 5);
+        float interval = Random.Range(1f, 15f);
         InvokeRepeating("Fire", interval, interval);
     }
 
     void Fire()
     {
         GameObject g = (GameObject)Instantiate(bullet, transform.position, Quaternion.identity);
-
         Physics2D.IgnoreCollision(g.GetComponent<Collider2D>(), transform.parent.GetComponent<Collider2D>());
     }
 

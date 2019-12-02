@@ -7,15 +7,8 @@ public class BulletDamageEnemy : MonoBehaviour
 {
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ship")
-        {
-            Destroy(collision.gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-            
         if (collision.gameObject.tag == "EnemyShip")
             Destroy(gameObject);
-
         Destroy(gameObject);
     }
 }

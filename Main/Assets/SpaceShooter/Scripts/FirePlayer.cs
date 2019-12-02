@@ -10,6 +10,7 @@ public class FirePlayer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            GetComponent<AudioSource>().Play();
             GameObject g = (GameObject) Instantiate(bullet, transform.position, Quaternion.identity);
             Physics2D.IgnoreCollision(g.GetComponent<Collider2D>(), transform.parent.GetComponent<Collider2D>());
         }

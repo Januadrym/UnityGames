@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Mario/Scenes/MarioScene.unity
-  isLoaded: 1
-  isActive: 1
